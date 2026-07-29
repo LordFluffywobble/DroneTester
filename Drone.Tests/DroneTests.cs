@@ -23,4 +23,13 @@ public class UnitTest1
         var result = drone.NewPosition(arrayA, arrayB);
         Assert.Equal([2, 15, 6], result);
     }
+
+    [Fact]
+    public void ShortestPathTest()
+    {
+        var drone = new Drone();
+        var result = drone.ShortestPath(4, 6, 7);
+        var result2 = drone.ShortestPath(1, 4, 8);
+        Assert.Equal(2, result);
+    }
 }
